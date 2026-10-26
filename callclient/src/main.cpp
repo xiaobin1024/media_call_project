@@ -51,7 +51,7 @@ int main(int argc, char* argv[])
     window.show();
 
     // 默认服务器地址（可被同目录 config.json 与命令行覆盖）
-    QString serverIp = "47.116.98.181";
+    QString serverIp = "47.100.244.110";
     quint16 serverPort = 8889;
 
     // 1) 读取可执行文件同目录下的 config.json（换服务器只需改这个文件）
