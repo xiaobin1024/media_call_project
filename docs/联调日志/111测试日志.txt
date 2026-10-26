@@ -1,0 +1,106 @@
+[16:24:57.915] [Config] 已读取 "C:/Users/86152/Desktop/项目和简历/media_call_project/dist/MediaCall-Client-Windows-x64/config.json" serverIp = "47.100.244.110" serverPort = 8889
+[16:26:34.212] [SC] recv type= login_resp
+[16:26:34.312] [SC] recv type= user_list
+[16:26:45.207] [SC] recv type= user_list
+[16:26:54.636] [SC] recv type= port_discovered
+[16:26:54.636] [SC] port_discovered port= 61428
+[16:26:54.636] [CM] portDiscovered signal: LDP set to 61428
+[16:26:56.655] [SC] recv type= call_offer
+[16:26:56.658] [CM] early probe sent for "333" localPort= 61034
+[16:26:56.760] [SC] recv type= port_discovered
+[16:26:56.760] [SC] port_discovered port= 61429
+[16:26:56.760] [CM] portDiscovered signal: LDP set to 61429
+[16:26:56.760] [SC] recv type= path_report
+[16:26:56.760] [CM] peer path report directRx= true reason= "first_direct"
+[16:26:56.761] [CM] local lan ip = "192.168.196.40"
+[16:26:56.761] [CM] early sdp sent to "333"
+[16:26:56.817] [RTP] sendVideo: blocked, remotePort= 61032 cap= VideoCapture(0x1b4780eaa20) running= false
+[16:26:56.875] [RTP] sendVideo: blocked, remotePort= 61032 cap= VideoCapture(0x1b4780eaa20) running= false
+[16:26:56.878] [CM] direct path confirmed locally, report to server
+[16:26:56.879] [CM] path_report directRx= true rx= 1 loss= "0.00" reason= "first_direct"
+[16:26:56.982] [RTP] sendVideo: blocked, remotePort= 61032 cap= VideoCapture(0x1b4780eaa20) running= false
+[16:26:57.092] [RTP] sendVideo: blocked, remotePort= 61032 cap= VideoCapture(0x1b4780eaa20) running= false
+[16:26:57.202] [RTP] sendVideo: blocked, remotePort= 61032 cap= VideoCapture(0x1b4780eaa20) running= false
+[16:26:57.312] [RTP] sendVideo: blocked, remotePort= 61032 cap= VideoCapture(0x1b4780eaa20) running= false
+[16:26:57.420] [RTP] sendVideo: blocked, remotePort= 61032 cap= VideoCapture(0x1b4780eaa20) running= false
+[16:26:57.502] [CM] acceptCall: start, LDP= 61429 localPort= 61034
+[16:26:58.287] [Video] camera inputs: 2
+[16:26:58.287] [Video] camera: "Integrated Camera" "\\\\?\\usb#vid_13d3&pid_56fb&mi_00#7&3129022c&1&0000#{e5323777-f976-4f5b-9b55-b94699c46e44}\\global"
+[16:26:58.287] [Video] camera: "Integrated IR Camera" "\\\\?\\usb#vid_13d3&pid_56fb&mi_02#7&3129022c&1&0002#{24e552d7-6523-47f7-a647-d3465bf1f5ca}\\global"
+[16:26:58.423] [Video] starting camera: "Integrated Camera"
+[16:26:58.504] [Video] camera active: true
+[16:26:58.504] [Video] camera started
+[16:26:58.504] [CM] startMedia: video capture started= true
+[16:26:58.505] [CM] path probing started, relayId= 0
+[16:26:58.505] [CM] acceptCall: final, pubPort= 61429 localPort= 61034 lanIp= "192.168.196.40"
+[16:26:58.523] [CM] direct path confirmed locally, report to server
+[16:26:58.524] [CM] path_report directRx= true rx= 1 loss= "0.00" reason= "first_direct"
+[16:26:58.528] [RTP] sendVideo: no new frame
+[16:26:58.599] [SC] recv type= relay_info
+[16:26:58.599] [SC] relay_info relayId= 1
+[16:26:58.600] [RTP] relay config "47.100.244.110" 8890 id= 1
+[16:26:58.600] [CM] relay id 1 via "47.100.244.110" 8890
+[16:26:58.624] [RTP] sendVideo: no new frame
+[16:26:58.753] [RTP] sendVideo: sent frame 6647 bytes in 6 fragments, ts= 0
+[16:26:58.844] [RTP] sendVideo: sent frame 6602 bytes in 6 fragments, ts= 9000
+[16:26:58.953] [RTP] sendVideo: sent frame 6570 bytes in 6 fragments, ts= 18000
+[16:26:59.073] [RTP] sendVideo: sent frame 6550 bytes in 6 fragments, ts= 27000
+[16:26:59.167] [SC] recv type= path_report
+[16:26:59.168] [CM] peer path report directRx= true reason= "first_direct"
+[16:26:59.171] [RTP] sendVideo: sent frame 6566 bytes in 6 fragments, ts= 36000
+[16:26:59.273] [SC] recv type= path_decision
+[16:26:59.273] [SC] path_decision mode= p2p_probation epoch= 1 reason= both_direct
+[16:26:59.274] [CM] path decision applied mode= "p2p_probation" epoch= 1 reason= "both_direct"
+[16:26:59.286] [RTP] sendVideo: sent frame 6461 bytes in 6 fragments, ts= 45000
+[16:26:59.391] [RTP] sendVideo: sent frame 6458 bytes in 6 fragments, ts= 54000
+[16:26:59.498] [CM] path_report directRx= true rx= 26 loss= "0.00" reason= "periodic"
+[16:26:59.500] [RTP] sendVideo: sent frame 6485 bytes in 6 fragments, ts= 63000
+[16:26:59.612] [RTP] sendVideo: sent frame 6544 bytes in 6 fragments, ts= 72000
+[16:26:59.723] [RTP] sendVideo: sent frame 6562 bytes in 6 fragments, ts= 81000
+[16:26:59.829] [RTP] sendVideo: sent frame 6530 bytes in 6 fragments, ts= 90000
+[16:26:59.937] [RTP] sendVideo: sent frame 6524 bytes in 6 fragments, ts= 99000
+[16:27:00.048] [RTP] sendVideo: sent frame 6466 bytes in 6 fragments, ts= 108000
+[16:27:00.117] [SC] recv type= path_report
+[16:27:00.117] [CM] peer path report directRx= true reason= "periodic"
+[16:27:00.156] [RTP] sendVideo: sent frame 6474 bytes in 6 fragments, ts= 117000
+[16:27:00.266] [RTP] sendVideo: sent frame 6481 bytes in 6 fragments, ts= 126000
+[16:27:00.374] [RTP] sendVideo: sent frame 6504 bytes in 6 fragments, ts= 135000
+[16:27:00.498] [RTP] sendVideo: sent frame 6541 bytes in 6 fragments, ts= 144000
+[16:27:00.505] [CM] path_report directRx= true rx= 82 loss= "0.00" reason= "periodic"
+[16:27:00.595] [RTP] sendVideo: sent frame 6540 bytes in 6 fragments, ts= 153000
+[16:27:00.705] [RTP] sendVideo: sent frame 6549 bytes in 6 fragments, ts= 162000
+[16:27:00.814] [RTP] sendVideo: sent frame 6538 bytes in 6 fragments, ts= 171000
+[16:27:00.922] [RTP] sendVideo: sent frame 6532 bytes in 6 fragments, ts= 180000
+[16:27:01.035] [RTP] sendVideo: sent frame 6533 bytes in 6 fragments, ts= 189000
+[16:27:01.111] [SC] recv type= path_report
+[16:27:01.111] [CM] peer path report directRx= true reason= "periodic"
+[16:27:01.141] [RTP] sendVideo: sent frame 6531 bytes in 6 fragments, ts= 198000
+[16:27:01.252] [RTP] sendVideo: sent frame 6546 bytes in 6 fragments, ts= 207000
+[16:27:01.360] [RTP] sendVideo: sent frame 6546 bytes in 6 fragments, ts= 216000
+[16:27:01.478] [RTP] sendVideo: sent frame 6507 bytes in 6 fragments, ts= 225000
+[16:27:01.498] [CM] path_report directRx= true rx= 136 loss= "0.00" reason= "periodic"
+[16:27:01.577] [RTP] sendVideo: sent frame 6482 bytes in 6 fragments, ts= 234000
+[16:27:01.689] [RTP] sendVideo: sent frame 6493 bytes in 6 fragments, ts= 243000
+[16:27:01.797] [RTP] sendVideo: sent frame 6459 bytes in 6 fragments, ts= 252000
+[16:27:01.909] [RTP] sendVideo: sent frame 6516 bytes in 6 fragments, ts= 261000
+[16:27:02.018] [RTP] sendVideo: sent frame 6542 bytes in 6 fragments, ts= 270000
+[16:27:02.114] [SC] recv type= path_report
+[16:27:02.114] [CM] peer path report directRx= true reason= "periodic"
+[16:27:02.124] [RTP] sendVideo: sent frame 6560 bytes in 6 fragments, ts= 279000
+[16:27:02.236] [RTP] sendVideo: sent frame 6555 bytes in 6 fragments, ts= 288000
+[16:27:02.257] [SC] recv type= path_decision
+[16:27:02.257] [SC] path_decision mode= p2p epoch= 2 reason= probation_ok
+[16:27:02.257] [CM] path decision applied mode= "p2p" epoch= 2 reason= "probation_ok"
+[16:27:02.344] [RTP] sendVideo: sent frame 6549 bytes in 6 fragments, ts= 297000
+[16:27:02.453] [RTP] sendVideo: sent frame 6540 bytes in 6 fragments, ts= 306000
+[16:27:02.498] [CM] path_report directRx= true rx= 190 loss= "0.00" reason= "periodic"
+[16:27:02.563] [RTP] sendVideo: sent frame 6563 bytes in 6 fragments, ts= 315000
+[16:27:02.677] [RTP] sendVideo: sent frame 6586 bytes in 6 fragments, ts= 324000
+[16:27:02.782] [RTP] sendVideo: sent frame 6578 bytes in 6 fragments, ts= 333000
+[16:27:02.891] [RTP] sendVideo: sent frame 6586 bytes in 6 fragments, ts= 342000
+[16:27:03.000] [RTP] sendVideo: sent frame 6570 bytes in 6 fragments, ts= 351000
+[16:27:03.113] [RTP] sendVideo: sent frame 6591 bytes in 6 fragments, ts= 360000
+[16:27:03.114] [SC] recv type= path_report
+[16:27:03.114] [CM] peer path report directRx= true reason= "periodic"
+[16:27:03.218] [RTP] sendVideo: sent frame 6563 bytes in 6 fragments, ts= 369000
+[16:27:03.605] [Video] camera active: false

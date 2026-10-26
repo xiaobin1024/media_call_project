@@ -1,0 +1,508 @@
+[16:26:42.077] [Config] 已读取 "C:/Users/86152/Desktop/项目和简历/media_call_project/dist/MediaCall-Client-Windows-x64/config.json" serverIp = "47.100.244.110" serverPort = 8889
+[16:26:45.210] [SC] recv type= login_resp
+[16:26:45.317] [SC] recv type= user_list
+[16:26:54.580] [CM] call: probe sent, waiting 2s, LDP= 0
+[16:26:54.690] [RTP] sendVideo: blocked, remotePort= 0 cap= VideoCapture(0x197672295c0) running= false
+[16:26:54.796] [RTP] sendVideo: blocked, remotePort= 0 cap= VideoCapture(0x197672295c0) running= false
+[16:26:54.905] [RTP] sendVideo: blocked, remotePort= 0 cap= VideoCapture(0x197672295c0) running= false
+[16:26:55.013] [RTP] sendVideo: blocked, remotePort= 0 cap= VideoCapture(0x197672295c0) running= false
+[16:26:55.123] [RTP] sendVideo: blocked, remotePort= 0 cap= VideoCapture(0x197672295c0) running= false
+[16:26:55.234] [RTP] sendVideo: blocked, remotePort= 0 cap= VideoCapture(0x197672295c0) running= false
+[16:26:55.342] [RTP] sendVideo: blocked, remotePort= 0 cap= VideoCapture(0x197672295c0) running= false
+[16:26:55.451] [RTP] sendVideo: blocked, remotePort= 0 cap= VideoCapture(0x197672295c0) running= false
+[16:26:55.561] [RTP] sendVideo: blocked, remotePort= 0 cap= VideoCapture(0x197672295c0) running= false
+[16:26:55.670] [RTP] sendVideo: blocked, remotePort= 0 cap= VideoCapture(0x197672295c0) running= false
+[16:26:55.780] [RTP] sendVideo: blocked, remotePort= 0 cap= VideoCapture(0x197672295c0) running= false
+[16:26:55.891] [RTP] sendVideo: blocked, remotePort= 0 cap= VideoCapture(0x197672295c0) running= false
+[16:26:56.000] [RTP] sendVideo: blocked, remotePort= 0 cap= VideoCapture(0x197672295c0) running= false
+[16:26:56.109] [RTP] sendVideo: blocked, remotePort= 0 cap= VideoCapture(0x197672295c0) running= false
+[16:26:56.216] [RTP] sendVideo: blocked, remotePort= 0 cap= VideoCapture(0x197672295c0) running= false
+[16:26:56.329] [RTP] sendVideo: blocked, remotePort= 0 cap= VideoCapture(0x197672295c0) running= false
+[16:26:56.436] [RTP] sendVideo: blocked, remotePort= 0 cap= VideoCapture(0x197672295c0) running= false
+[16:26:56.545] [RTP] sendVideo: blocked, remotePort= 0 cap= VideoCapture(0x197672295c0) running= false
+[16:26:56.581] [CM] local lan ip = "192.168.196.40"
+[16:26:56.582] [CM] call: loop done, pubPort= 0 localPort= 61032 lanIp= "192.168.196.40"
+[16:26:56.656] [RTP] sendVideo: blocked, remotePort= 0 cap= VideoCapture(0x197672295c0) running= false
+[16:26:56.658] [CM] direct path confirmed locally, report to server
+[16:26:56.658] [CM] path_report directRx= true rx= 1 loss= "0.00" reason= "first_direct"
+[16:26:56.766] [RTP] sendVideo: blocked, remotePort= 0 cap= VideoCapture(0x197672295c0) running= false
+[16:26:56.875] [RTP] sendVideo: blocked, remotePort= 0 cap= VideoCapture(0x197672295c0) running= false
+[16:26:56.878] [SC] recv type= call_early
+[16:26:56.878] [CM] early punch to "192.168.196.40" 61034
+[16:26:56.976] [SC] recv type= path_report
+[16:26:56.977] [CM] peer path report directRx= true reason= "first_direct"
+[16:26:56.982] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:26:57.092] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:26:57.202] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:26:57.312] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:26:57.420] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:26:57.531] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:26:57.639] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:26:57.749] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:26:57.860] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:26:57.971] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:26:58.077] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:26:58.187] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:26:58.296] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:26:58.408] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:26:58.515] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:26:58.599] [SC] recv type= call_answer
+[16:26:58.871] [Video] camera inputs: 2
+[16:26:58.872] [Video] camera: "Integrated Camera" "\\\\?\\usb#vid_13d3&pid_56fb&mi_00#7&3129022c&1&0000#{e5323777-f976-4f5b-9b55-b94699c46e44}\\global"
+[16:26:58.872] [Video] camera: "Integrated IR Camera" "\\\\?\\usb#vid_13d3&pid_56fb&mi_02#7&3129022c&1&0002#{24e552d7-6523-47f7-a647-d3465bf1f5ca}\\global"
+[16:26:59.004] [Video] starting camera: "Integrated Camera"
+[16:26:59.046] [Video] camera active: true
+[16:26:59.046] [Video] camera started
+[16:26:59.047] [CM] startMedia: video capture started= true
+[16:26:59.047] [CM] path probing started, relayId= 0
+[16:26:59.058] [CM] direct path confirmed locally, report to server
+[16:26:59.060] [CM] path_report directRx= true rx= 1 loss= "0.00" reason= "first_direct"
+[16:26:59.071] [RTP] recv video, payload= 1200 marker= false seq= 0 ts= 0
+[16:26:59.072] [RTP] recv video, payload= 1200 marker= false seq= 1 ts= 0
+[16:26:59.072] [RTP] recv video, payload= 1200 marker= false seq= 2 ts= 0
+[16:26:59.072] [RTP] recv video, payload= 1200 marker= false seq= 3 ts= 0
+[16:26:59.072] [RTP] recv video, payload= 1200 marker= false seq= 4 ts= 0
+[16:26:59.072] [RTP] recv video, payload= 647 marker= true seq= 5 ts= 0
+[16:26:59.072] [RTP] handleVideo: assembling 6647 bytes from ts= 0
+[16:26:59.089] [RTP] handleVideo: decoded OK, size= QSize(320, 180)
+[16:26:59.089] [VideoRender] rendering frame QSize(320, 180)
+[16:26:59.090] [RTP] recv video, payload= 1200 marker= false seq= 6 ts= 9000
+[16:26:59.090] [RTP] recv video, payload= 1200 marker= false seq= 7 ts= 9000
+[16:26:59.090] [RTP] recv video, payload= 1200 marker= false seq= 8 ts= 9000
+[16:26:59.090] [RTP] recv video, payload= 1200 marker= false seq= 9 ts= 9000
+[16:26:59.090] [RTP] recv video, payload= 1200 marker= false seq= 10 ts= 9000
+[16:26:59.090] [RTP] recv video, payload= 602 marker= true seq= 11 ts= 9000
+[16:26:59.090] [RTP] handleVideo: assembling 6602 bytes from ts= 9000
+[16:26:59.091] [RTP] handleVideo: decoded OK, size= QSize(320, 180)
+[16:26:59.091] [VideoRender] rendering frame QSize(320, 180)
+[16:26:59.092] [RTP] recv video, payload= 1200 marker= false seq= 12 ts= 18000
+[16:26:59.094] [RTP] recv video, payload= 1200 marker= false seq= 13 ts= 18000
+[16:26:59.094] [RTP] recv video, payload= 1200 marker= false seq= 14 ts= 18000
+[16:26:59.094] [RTP] recv video, payload= 1200 marker= false seq= 15 ts= 18000
+[16:26:59.094] [RTP] recv video, payload= 1200 marker= false seq= 16 ts= 18000
+[16:26:59.094] [RTP] recv video, payload= 570 marker= true seq= 17 ts= 18000
+[16:26:59.094] [RTP] handleVideo: assembling 6570 bytes from ts= 18000
+[16:26:59.095] [RTP] handleVideo: decoded OK, size= QSize(320, 180)
+[16:26:59.095] [VideoRender] rendering frame QSize(320, 180)
+[16:26:59.095] [RTP] recv video, payload= 1200 marker= false seq= 18 ts= 27000
+[16:26:59.095] [RTP] recv video, payload= 1200 marker= false seq= 19 ts= 27000
+[16:26:59.095] [RTP] recv video, payload= 1200 marker= false seq= 20 ts= 27000
+[16:26:59.096] [RTP] recv video, payload= 1200 marker= false seq= 21 ts= 27000
+[16:26:59.096] [RTP] recv video, payload= 1200 marker= false seq= 22 ts= 27000
+[16:26:59.096] [RTP] recv video, payload= 550 marker= true seq= 23 ts= 27000
+[16:26:59.096] [RTP] handleVideo: assembling 6550 bytes from ts= 27000
+[16:26:59.096] [RTP] handleVideo: decoded OK, size= QSize(320, 180)
+[16:26:59.096] [VideoRender] rendering frame QSize(320, 180)
+[16:26:59.097] [SC] recv type= relay_info
+[16:26:59.097] [SC] relay_info relayId= 1
+[16:26:59.097] [RTP] relay config "47.100.244.110" 8890 id= 1
+[16:26:59.097] [CM] relay id 1 via "47.100.244.110" 8890
+[16:26:59.097] [SC] recv type= path_report
+[16:26:59.097] [CM] peer path report directRx= true reason= "first_direct"
+[16:26:59.102] [RTP] sendVideo: no new frame
+[16:26:59.102] [Video] camera error: QCamera::CameraError "由于缺少硬件资源，硬件 MFT 启动流式传输失败。"
+[16:26:59.170] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:26:59.171] [SC] recv type= path_decision
+[16:26:59.171] [SC] path_decision mode= p2p_probation epoch= 1 reason= both_direct
+[16:26:59.171] [CM] path decision applied mode= "p2p_probation" epoch= 1 reason= "both_direct"
+[16:26:59.171] [RTP] recv video, payload= 1200 marker= false seq= 24 ts= 36000
+[16:26:59.172] [RTP] recv video, payload= 1200 marker= false seq= 25 ts= 36000
+[16:26:59.172] [RTP] recv video, payload= 1200 marker= false seq= 26 ts= 36000
+[16:26:59.172] [RTP] recv video, payload= 1200 marker= false seq= 27 ts= 36000
+[16:26:59.172] [RTP] recv video, payload= 1200 marker= false seq= 28 ts= 36000
+[16:26:59.172] [RTP] recv video, payload= 566 marker= true seq= 29 ts= 36000
+[16:26:59.172] [RTP] handleVideo: assembling 6566 bytes from ts= 36000
+[16:26:59.173] [RTP] handleVideo: decoded OK, size= QSize(320, 180)
+[16:26:59.173] [VideoRender] rendering frame QSize(320, 180)
+[16:26:59.280] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:26:59.286] [RTP] recv video, payload= 1200 marker= false seq= 30 ts= 45000
+[16:26:59.286] [RTP] recv video, payload= 1200 marker= false seq= 31 ts= 45000
+[16:26:59.287] [RTP] recv video, payload= 1200 marker= false seq= 32 ts= 45000
+[16:26:59.287] [RTP] recv video, payload= 1200 marker= false seq= 33 ts= 45000
+[16:26:59.287] [RTP] recv video, payload= 1200 marker= false seq= 34 ts= 45000
+[16:26:59.287] [RTP] recv video, payload= 461 marker= true seq= 35 ts= 45000
+[16:26:59.287] [RTP] handleVideo: assembling 6461 bytes from ts= 45000
+[16:26:59.287] [RTP] handleVideo: decoded OK, size= QSize(320, 180)
+[16:26:59.287] [VideoRender] rendering frame QSize(320, 180)
+[16:26:59.389] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:26:59.391] [RTP] recv video, payload= 1200 marker= false seq= 36 ts= 54000
+[16:26:59.391] [RTP] recv video, payload= 1200 marker= false seq= 37 ts= 54000
+[16:26:59.391] [RTP] recv video, payload= 1200 marker= false seq= 38 ts= 54000
+[16:26:59.391] [RTP] recv video, payload= 1200 marker= false seq= 39 ts= 54000
+[16:26:59.391] [RTP] recv video, payload= 1200 marker= false seq= 40 ts= 54000
+[16:26:59.392] [RTP] recv video, payload= 458 marker= true seq= 41 ts= 54000
+[16:26:59.392] [RTP] handleVideo: assembling 6458 bytes from ts= 54000
+[16:26:59.393] [RTP] handleVideo: decoded OK, size= QSize(320, 180)
+[16:26:59.393] [VideoRender] rendering frame QSize(320, 180)
+[16:26:59.498] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:26:59.500] [RTP] recv video, payload= 1200 marker= false seq= 42 ts= 63000
+[16:26:59.500] [RTP] recv video, payload= 1200 marker= false seq= 43 ts= 63000
+[16:26:59.500] [RTP] recv video, payload= 1200 marker= false seq= 44 ts= 63000
+[16:26:59.500] [RTP] recv video, payload= 1200 marker= false seq= 45 ts= 63000
+[16:26:59.500] [RTP] recv video, payload= 1200 marker= false seq= 46 ts= 63000
+[16:26:59.500] [RTP] recv video, payload= 485 marker= true seq= 47 ts= 63000
+[16:26:59.501] [RTP] handleVideo: assembling 6485 bytes from ts= 63000
+[16:26:59.501] [RTP] handleVideo: decoded OK, size= QSize(320, 180)
+[16:26:59.501] [VideoRender] rendering frame QSize(320, 180)
+[16:26:59.561] [SC] recv type= path_report
+[16:26:59.561] [CM] peer path report directRx= true reason= "periodic"
+[16:26:59.610] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:26:59.612] [RTP] recv video, payload= 1200 marker= false seq= 48 ts= 72000
+[16:26:59.612] [RTP] recv video, payload= 1200 marker= false seq= 49 ts= 72000
+[16:26:59.612] [RTP] recv video, payload= 1200 marker= false seq= 50 ts= 72000
+[16:26:59.612] [RTP] recv video, payload= 1200 marker= false seq= 51 ts= 72000
+[16:26:59.612] [RTP] recv video, payload= 1200 marker= false seq= 52 ts= 72000
+[16:26:59.612] [RTP] recv video, payload= 544 marker= true seq= 53 ts= 72000
+[16:26:59.613] [RTP] handleVideo: assembling 6544 bytes from ts= 72000
+[16:26:59.613] [RTP] handleVideo: decoded OK, size= QSize(320, 180)
+[16:26:59.614] [VideoRender] rendering frame QSize(320, 180)
+[16:26:59.717] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:26:59.723] [RTP] recv video, payload= 1200 marker= false seq= 54 ts= 81000
+[16:26:59.724] [RTP] recv video, payload= 1200 marker= false seq= 55 ts= 81000
+[16:26:59.724] [RTP] recv video, payload= 1200 marker= false seq= 56 ts= 81000
+[16:26:59.724] [RTP] recv video, payload= 1200 marker= false seq= 57 ts= 81000
+[16:26:59.724] [RTP] recv video, payload= 1200 marker= false seq= 58 ts= 81000
+[16:26:59.724] [RTP] recv video, payload= 562 marker= true seq= 59 ts= 81000
+[16:26:59.724] [RTP] handleVideo: assembling 6562 bytes from ts= 81000
+[16:26:59.724] [RTP] handleVideo: decoded OK, size= QSize(320, 180)
+[16:26:59.724] [VideoRender] rendering frame QSize(320, 180)
+[16:26:59.827] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:26:59.829] [RTP] recv video, payload= 1200 marker= false seq= 60 ts= 90000
+[16:26:59.829] [RTP] recv video, payload= 1200 marker= false seq= 61 ts= 90000
+[16:26:59.829] [RTP] recv video, payload= 1200 marker= false seq= 62 ts= 90000
+[16:26:59.829] [RTP] recv video, payload= 1200 marker= false seq= 63 ts= 90000
+[16:26:59.829] [RTP] recv video, payload= 1200 marker= false seq= 64 ts= 90000
+[16:26:59.829] [RTP] recv video, payload= 530 marker= true seq= 65 ts= 90000
+[16:26:59.829] [RTP] handleVideo: assembling 6530 bytes from ts= 90000
+[16:26:59.830] [RTP] handleVideo: decoded OK, size= QSize(320, 180)
+[16:26:59.830] [VideoRender] rendering frame QSize(320, 180)
+[16:26:59.936] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:26:59.937] [RTP] recv video, payload= 1200 marker= false seq= 66 ts= 99000
+[16:26:59.937] [RTP] recv video, payload= 1200 marker= false seq= 67 ts= 99000
+[16:26:59.937] [RTP] recv video, payload= 1200 marker= false seq= 68 ts= 99000
+[16:26:59.938] [RTP] recv video, payload= 1200 marker= false seq= 69 ts= 99000
+[16:26:59.938] [RTP] recv video, payload= 1200 marker= false seq= 70 ts= 99000
+[16:26:59.938] [RTP] recv video, payload= 524 marker= true seq= 71 ts= 99000
+[16:26:59.938] [RTP] handleVideo: assembling 6524 bytes from ts= 99000
+[16:26:59.938] [RTP] handleVideo: decoded OK, size= QSize(320, 180)
+[16:26:59.938] [VideoRender] rendering frame QSize(320, 180)
+[16:27:00.046] [CM] path_report directRx= true rx= 145 loss= "0.00" reason= "periodic"
+[16:27:00.047] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:27:00.050] [RTP] recv video, payload= 1200 marker= false seq= 72 ts= 108000
+[16:27:00.051] [RTP] recv video, payload= 1200 marker= false seq= 73 ts= 108000
+[16:27:00.051] [RTP] recv video, payload= 1200 marker= false seq= 74 ts= 108000
+[16:27:00.051] [RTP] recv video, payload= 1200 marker= false seq= 75 ts= 108000
+[16:27:00.051] [RTP] recv video, payload= 1200 marker= false seq= 76 ts= 108000
+[16:27:00.051] [RTP] recv video, payload= 466 marker= true seq= 77 ts= 108000
+[16:27:00.051] [RTP] handleVideo: assembling 6466 bytes from ts= 108000
+[16:27:00.052] [RTP] handleVideo: decoded OK, size= QSize(320, 180)
+[16:27:00.052] [VideoRender] rendering frame QSize(320, 180)
+[16:27:00.155] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:27:00.156] [RTP] recv video, payload= 1200 marker= false seq= 78 ts= 117000
+[16:27:00.156] [RTP] recv video, payload= 1200 marker= false seq= 79 ts= 117000
+[16:27:00.156] [RTP] recv video, payload= 1200 marker= false seq= 80 ts= 117000
+[16:27:00.157] [RTP] recv video, payload= 1200 marker= false seq= 81 ts= 117000
+[16:27:00.157] [RTP] recv video, payload= 1200 marker= false seq= 82 ts= 117000
+[16:27:00.157] [RTP] recv video, payload= 474 marker= true seq= 83 ts= 117000
+[16:27:00.157] [RTP] handleVideo: assembling 6474 bytes from ts= 117000
+[16:27:00.158] [RTP] handleVideo: decoded OK, size= QSize(320, 180)
+[16:27:00.158] [VideoRender] rendering frame QSize(320, 180)
+[16:27:00.264] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:27:00.266] [RTP] recv video, payload= 1200 marker= false seq= 84 ts= 126000
+[16:27:00.266] [RTP] recv video, payload= 1200 marker= false seq= 85 ts= 126000
+[16:27:00.266] [RTP] recv video, payload= 1200 marker= false seq= 86 ts= 126000
+[16:27:00.266] [RTP] recv video, payload= 1200 marker= false seq= 87 ts= 126000
+[16:27:00.266] [RTP] recv video, payload= 1200 marker= false seq= 88 ts= 126000
+[16:27:00.266] [RTP] recv video, payload= 481 marker= true seq= 89 ts= 126000
+[16:27:00.266] [RTP] handleVideo: assembling 6481 bytes from ts= 126000
+[16:27:00.267] [RTP] handleVideo: decoded OK, size= QSize(320, 180)
+[16:27:00.267] [VideoRender] rendering frame QSize(320, 180)
+[16:27:00.373] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:27:00.374] [RTP] recv video, payload= 1200 marker= false seq= 90 ts= 135000
+[16:27:00.374] [RTP] recv video, payload= 1200 marker= false seq= 91 ts= 135000
+[16:27:00.376] [RTP] recv video, payload= 1200 marker= false seq= 92 ts= 135000
+[16:27:00.376] [RTP] recv video, payload= 1200 marker= false seq= 93 ts= 135000
+[16:27:00.376] [RTP] recv video, payload= 1200 marker= false seq= 94 ts= 135000
+[16:27:00.376] [RTP] recv video, payload= 504 marker= true seq= 95 ts= 135000
+[16:27:00.376] [RTP] handleVideo: assembling 6504 bytes from ts= 135000
+[16:27:00.376] [RTP] handleVideo: decoded OK, size= QSize(320, 180)
+[16:27:00.376] [VideoRender] rendering frame QSize(320, 180)
+[16:27:00.482] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:27:00.498] [RTP] recv video, payload= 1200 marker= false seq= 96 ts= 144000
+[16:27:00.498] [RTP] recv video, payload= 1200 marker= false seq= 97 ts= 144000
+[16:27:00.498] [RTP] recv video, payload= 1200 marker= false seq= 98 ts= 144000
+[16:27:00.498] [RTP] recv video, payload= 1200 marker= false seq= 99 ts= 144000
+[16:27:00.498] [RTP] recv video, payload= 1200 marker= false seq= 100 ts= 144000
+[16:27:00.499] [RTP] recv video, payload= 541 marker= true seq= 101 ts= 144000
+[16:27:00.500] [RTP] handleVideo: assembling 6541 bytes from ts= 144000
+[16:27:00.500] [RTP] handleVideo: decoded OK, size= QSize(320, 180)
+[16:27:00.501] [VideoRender] rendering frame QSize(320, 180)
+[16:27:00.566] [SC] recv type= path_report
+[16:27:00.567] [CM] peer path report directRx= true reason= "periodic"
+[16:27:00.593] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:27:00.595] [RTP] recv video, payload= 1200 marker= false seq= 102 ts= 153000
+[16:27:00.596] [RTP] recv video, payload= 1200 marker= false seq= 103 ts= 153000
+[16:27:00.596] [RTP] recv video, payload= 1200 marker= false seq= 104 ts= 153000
+[16:27:00.596] [RTP] recv video, payload= 1200 marker= false seq= 105 ts= 153000
+[16:27:00.596] [RTP] recv video, payload= 1200 marker= false seq= 106 ts= 153000
+[16:27:00.596] [RTP] recv video, payload= 540 marker= true seq= 107 ts= 153000
+[16:27:00.596] [RTP] handleVideo: assembling 6540 bytes from ts= 153000
+[16:27:00.597] [RTP] handleVideo: decoded OK, size= QSize(320, 180)
+[16:27:00.597] [VideoRender] rendering frame QSize(320, 180)
+[16:27:00.703] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:27:00.705] [RTP] recv video, payload= 1200 marker= false seq= 108 ts= 162000
+[16:27:00.705] [RTP] recv video, payload= 1200 marker= false seq= 109 ts= 162000
+[16:27:00.705] [RTP] recv video, payload= 1200 marker= false seq= 110 ts= 162000
+[16:27:00.705] [RTP] recv video, payload= 1200 marker= false seq= 111 ts= 162000
+[16:27:00.705] [RTP] recv video, payload= 1200 marker= false seq= 112 ts= 162000
+[16:27:00.705] [RTP] recv video, payload= 549 marker= true seq= 113 ts= 162000
+[16:27:00.705] [RTP] handleVideo: assembling 6549 bytes from ts= 162000
+[16:27:00.707] [RTP] handleVideo: decoded OK, size= QSize(320, 180)
+[16:27:00.707] [VideoRender] rendering frame QSize(320, 180)
+[16:27:00.811] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:27:00.814] [RTP] recv video, payload= 1200 marker= false seq= 114 ts= 171000
+[16:27:00.814] [RTP] recv video, payload= 1200 marker= false seq= 115 ts= 171000
+[16:27:00.814] [RTP] recv video, payload= 1200 marker= false seq= 116 ts= 171000
+[16:27:00.814] [RTP] recv video, payload= 1200 marker= false seq= 117 ts= 171000
+[16:27:00.815] [RTP] recv video, payload= 1200 marker= false seq= 118 ts= 171000
+[16:27:00.815] [RTP] recv video, payload= 538 marker= true seq= 119 ts= 171000
+[16:27:00.815] [RTP] handleVideo: assembling 6538 bytes from ts= 171000
+[16:27:00.816] [RTP] handleVideo: decoded OK, size= QSize(320, 180)
+[16:27:00.816] [VideoRender] rendering frame QSize(320, 180)
+[16:27:00.921] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:27:00.922] [RTP] recv video, payload= 1200 marker= false seq= 120 ts= 180000
+[16:27:00.922] [RTP] recv video, payload= 1200 marker= false seq= 121 ts= 180000
+[16:27:00.923] [RTP] recv video, payload= 1200 marker= false seq= 122 ts= 180000
+[16:27:00.923] [RTP] recv video, payload= 1200 marker= false seq= 123 ts= 180000
+[16:27:00.923] [RTP] recv video, payload= 1200 marker= false seq= 124 ts= 180000
+[16:27:00.923] [RTP] recv video, payload= 532 marker= true seq= 125 ts= 180000
+[16:27:00.923] [RTP] handleVideo: assembling 6532 bytes from ts= 180000
+[16:27:00.924] [RTP] handleVideo: decoded OK, size= QSize(320, 180)
+[16:27:00.924] [VideoRender] rendering frame QSize(320, 180)
+[16:27:01.033] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:27:01.035] [RTP] recv video, payload= 1200 marker= false seq= 126 ts= 189000
+[16:27:01.035] [RTP] recv video, payload= 1200 marker= false seq= 127 ts= 189000
+[16:27:01.035] [RTP] recv video, payload= 1200 marker= false seq= 128 ts= 189000
+[16:27:01.035] [RTP] recv video, payload= 1200 marker= false seq= 129 ts= 189000
+[16:27:01.035] [RTP] recv video, payload= 1200 marker= false seq= 130 ts= 189000
+[16:27:01.035] [RTP] recv video, payload= 533 marker= true seq= 131 ts= 189000
+[16:27:01.035] [RTP] handleVideo: assembling 6533 bytes from ts= 189000
+[16:27:01.036] [RTP] handleVideo: decoded OK, size= QSize(320, 180)
+[16:27:01.036] [VideoRender] rendering frame QSize(320, 180)
+[16:27:01.047] [CM] path_report directRx= true rx= 258 loss= "0.00" reason= "periodic"
+[16:27:01.138] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:27:01.141] [RTP] recv video, payload= 1200 marker= false seq= 132 ts= 198000
+[16:27:01.141] [RTP] recv video, payload= 1200 marker= false seq= 133 ts= 198000
+[16:27:01.141] [RTP] recv video, payload= 1200 marker= false seq= 134 ts= 198000
+[16:27:01.141] [RTP] recv video, payload= 1200 marker= false seq= 135 ts= 198000
+[16:27:01.141] [RTP] recv video, payload= 1200 marker= false seq= 136 ts= 198000
+[16:27:01.141] [RTP] recv video, payload= 531 marker= true seq= 137 ts= 198000
+[16:27:01.142] [RTP] handleVideo: assembling 6531 bytes from ts= 198000
+[16:27:01.142] [RTP] handleVideo: decoded OK, size= QSize(320, 180)
+[16:27:01.142] [VideoRender] rendering frame QSize(320, 180)
+[16:27:01.251] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:27:01.252] [RTP] recv video, payload= 1200 marker= false seq= 138 ts= 207000
+[16:27:01.252] [RTP] recv video, payload= 1200 marker= false seq= 139 ts= 207000
+[16:27:01.252] [RTP] recv video, payload= 1200 marker= false seq= 140 ts= 207000
+[16:27:01.252] [RTP] recv video, payload= 1200 marker= false seq= 141 ts= 207000
+[16:27:01.253] [RTP] recv video, payload= 1200 marker= false seq= 142 ts= 207000
+[16:27:01.253] [RTP] recv video, payload= 546 marker= true seq= 143 ts= 207000
+[16:27:01.253] [RTP] handleVideo: assembling 6546 bytes from ts= 207000
+[16:27:01.253] [RTP] handleVideo: decoded OK, size= QSize(320, 180)
+[16:27:01.253] [VideoRender] rendering frame QSize(320, 180)
+[16:27:01.358] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:27:01.360] [RTP] recv video, payload= 1200 marker= false seq= 144 ts= 216000
+[16:27:01.360] [RTP] recv video, payload= 1200 marker= false seq= 145 ts= 216000
+[16:27:01.361] [RTP] recv video, payload= 1200 marker= false seq= 146 ts= 216000
+[16:27:01.361] [RTP] recv video, payload= 1200 marker= false seq= 147 ts= 216000
+[16:27:01.361] [RTP] recv video, payload= 1200 marker= false seq= 148 ts= 216000
+[16:27:01.361] [RTP] recv video, payload= 546 marker= true seq= 149 ts= 216000
+[16:27:01.361] [RTP] handleVideo: assembling 6546 bytes from ts= 216000
+[16:27:01.362] [RTP] handleVideo: decoded OK, size= QSize(320, 180)
+[16:27:01.362] [VideoRender] rendering frame QSize(320, 180)
+[16:27:01.468] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:27:01.478] [RTP] recv video, payload= 1200 marker= false seq= 150 ts= 225000
+[16:27:01.478] [RTP] recv video, payload= 1200 marker= false seq= 151 ts= 225000
+[16:27:01.478] [RTP] recv video, payload= 1200 marker= false seq= 152 ts= 225000
+[16:27:01.478] [RTP] recv video, payload= 1200 marker= false seq= 153 ts= 225000
+[16:27:01.478] [RTP] recv video, payload= 1200 marker= false seq= 154 ts= 225000
+[16:27:01.479] [RTP] recv video, payload= 507 marker= true seq= 155 ts= 225000
+[16:27:01.479] [RTP] handleVideo: assembling 6507 bytes from ts= 225000
+[16:27:01.479] [RTP] handleVideo: decoded OK, size= QSize(320, 180)
+[16:27:01.479] [VideoRender] rendering frame QSize(320, 180)
+[16:27:01.560] [SC] recv type= path_report
+[16:27:01.560] [CM] peer path report directRx= true reason= "periodic"
+[16:27:01.576] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:27:01.577] [RTP] recv video, payload= 1200 marker= false seq= 156 ts= 234000
+[16:27:01.578] [RTP] recv video, payload= 1200 marker= false seq= 157 ts= 234000
+[16:27:01.578] [RTP] recv video, payload= 1200 marker= false seq= 158 ts= 234000
+[16:27:01.578] [RTP] recv video, payload= 1200 marker= false seq= 159 ts= 234000
+[16:27:01.578] [RTP] recv video, payload= 1200 marker= false seq= 160 ts= 234000
+[16:27:01.578] [RTP] recv video, payload= 482 marker= true seq= 161 ts= 234000
+[16:27:01.578] [RTP] handleVideo: assembling 6482 bytes from ts= 234000
+[16:27:01.579] [RTP] handleVideo: decoded OK, size= QSize(320, 180)
+[16:27:01.579] [VideoRender] rendering frame QSize(320, 180)
+[16:27:01.687] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:27:01.689] [RTP] recv video, payload= 1200 marker= false seq= 162 ts= 243000
+[16:27:01.689] [RTP] recv video, payload= 1200 marker= false seq= 163 ts= 243000
+[16:27:01.689] [RTP] recv video, payload= 1200 marker= false seq= 164 ts= 243000
+[16:27:01.689] [RTP] recv video, payload= 1200 marker= false seq= 165 ts= 243000
+[16:27:01.689] [RTP] recv video, payload= 1200 marker= false seq= 166 ts= 243000
+[16:27:01.690] [RTP] recv video, payload= 493 marker= true seq= 167 ts= 243000
+[16:27:01.690] [RTP] handleVideo: assembling 6493 bytes from ts= 243000
+[16:27:01.690] [RTP] handleVideo: decoded OK, size= QSize(320, 180)
+[16:27:01.690] [VideoRender] rendering frame QSize(320, 180)
+[16:27:01.795] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:27:01.797] [RTP] recv video, payload= 1200 marker= false seq= 168 ts= 252000
+[16:27:01.797] [RTP] recv video, payload= 1200 marker= false seq= 169 ts= 252000
+[16:27:01.797] [RTP] recv video, payload= 1200 marker= false seq= 170 ts= 252000
+[16:27:01.797] [RTP] recv video, payload= 1200 marker= false seq= 171 ts= 252000
+[16:27:01.797] [RTP] recv video, payload= 1200 marker= false seq= 172 ts= 252000
+[16:27:01.797] [RTP] recv video, payload= 459 marker= true seq= 173 ts= 252000
+[16:27:01.797] [RTP] handleVideo: assembling 6459 bytes from ts= 252000
+[16:27:01.798] [RTP] handleVideo: decoded OK, size= QSize(320, 180)
+[16:27:01.798] [VideoRender] rendering frame QSize(320, 180)
+[16:27:01.905] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:27:01.909] [RTP] recv video, payload= 1200 marker= false seq= 174 ts= 261000
+[16:27:01.909] [RTP] recv video, payload= 1200 marker= false seq= 175 ts= 261000
+[16:27:01.909] [RTP] recv video, payload= 1200 marker= false seq= 176 ts= 261000
+[16:27:01.909] [RTP] recv video, payload= 1200 marker= false seq= 177 ts= 261000
+[16:27:01.909] [RTP] recv video, payload= 1200 marker= false seq= 178 ts= 261000
+[16:27:01.909] [RTP] recv video, payload= 516 marker= true seq= 179 ts= 261000
+[16:27:01.909] [RTP] frame stat: ok= 30 dropped= 0 loss= "0.00" %
+[16:27:01.909] [RTP] handleVideo: assembling 6516 bytes from ts= 261000
+[16:27:01.910] [RTP] handleVideo: decoded OK, size= QSize(320, 180)
+[16:27:01.910] [VideoRender] rendering frame QSize(320, 180)
+[16:27:02.016] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:27:02.018] [RTP] recv video, payload= 1200 marker= false seq= 180 ts= 270000
+[16:27:02.018] [RTP] recv video, payload= 1200 marker= false seq= 181 ts= 270000
+[16:27:02.018] [RTP] recv video, payload= 1200 marker= false seq= 182 ts= 270000
+[16:27:02.018] [RTP] recv video, payload= 1200 marker= false seq= 183 ts= 270000
+[16:27:02.018] [RTP] recv video, payload= 1200 marker= false seq= 184 ts= 270000
+[16:27:02.018] [RTP] recv video, payload= 542 marker= true seq= 185 ts= 270000
+[16:27:02.018] [RTP] handleVideo: assembling 6542 bytes from ts= 270000
+[16:27:02.019] [RTP] handleVideo: decoded OK, size= QSize(320, 180)
+[16:27:02.019] [VideoRender] rendering frame QSize(320, 180)
+[16:27:02.048] [CM] path_report directRx= true rx= 368 loss= "0.00" reason= "periodic"
+[16:27:02.123] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:27:02.124] [RTP] recv video, payload= 1200 marker= false seq= 186 ts= 279000
+[16:27:02.124] [RTP] recv video, payload= 1200 marker= false seq= 187 ts= 279000
+[16:27:02.124] [RTP] recv video, payload= 1200 marker= false seq= 188 ts= 279000
+[16:27:02.124] [RTP] recv video, payload= 1200 marker= false seq= 189 ts= 279000
+[16:27:02.124] [RTP] recv video, payload= 1200 marker= false seq= 190 ts= 279000
+[16:27:02.124] [RTP] recv video, payload= 560 marker= true seq= 191 ts= 279000
+[16:27:02.124] [RTP] handleVideo: assembling 6560 bytes from ts= 279000
+[16:27:02.125] [RTP] handleVideo: decoded OK, size= QSize(320, 180)
+[16:27:02.125] [VideoRender] rendering frame QSize(320, 180)
+[16:27:02.233] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:27:02.236] [RTP] recv video, payload= 1200 marker= false seq= 192 ts= 288000
+[16:27:02.236] [RTP] recv video, payload= 1200 marker= false seq= 193 ts= 288000
+[16:27:02.236] [RTP] recv video, payload= 1200 marker= false seq= 194 ts= 288000
+[16:27:02.236] [RTP] recv video, payload= 1200 marker= false seq= 195 ts= 288000
+[16:27:02.236] [RTP] recv video, payload= 1200 marker= false seq= 196 ts= 288000
+[16:27:02.236] [RTP] recv video, payload= 555 marker= true seq= 197 ts= 288000
+[16:27:02.236] [RTP] handleVideo: assembling 6555 bytes from ts= 288000
+[16:27:02.237] [RTP] handleVideo: decoded OK, size= QSize(320, 180)
+[16:27:02.237] [VideoRender] rendering frame QSize(320, 180)
+[16:27:02.257] [SC] recv type= path_decision
+[16:27:02.257] [SC] path_decision mode= p2p epoch= 2 reason= probation_ok
+[16:27:02.257] [CM] path decision applied mode= "p2p" epoch= 2 reason= "probation_ok"
+[16:27:02.342] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:27:02.344] [RTP] recv video, payload= 1200 marker= false seq= 198 ts= 297000
+[16:27:02.344] [RTP] recv video, payload= 1200 marker= false seq= 199 ts= 297000
+[16:27:02.344] [RTP] recv video, payload= 1200 marker= false seq= 200 ts= 297000
+[16:27:02.344] [RTP] recv video, payload= 1200 marker= false seq= 201 ts= 297000
+[16:27:02.344] [RTP] recv video, payload= 1200 marker= false seq= 202 ts= 297000
+[16:27:02.344] [RTP] recv video, payload= 549 marker= true seq= 203 ts= 297000
+[16:27:02.344] [RTP] handleVideo: assembling 6549 bytes from ts= 297000
+[16:27:02.345] [RTP] handleVideo: decoded OK, size= QSize(320, 180)
+[16:27:02.345] [VideoRender] rendering frame QSize(320, 180)
+[16:27:02.451] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:27:02.453] [RTP] recv video, payload= 1200 marker= false seq= 204 ts= 306000
+[16:27:02.453] [RTP] recv video, payload= 1200 marker= false seq= 205 ts= 306000
+[16:27:02.453] [RTP] recv video, payload= 1200 marker= false seq= 206 ts= 306000
+[16:27:02.453] [RTP] recv video, payload= 1200 marker= false seq= 207 ts= 306000
+[16:27:02.453] [RTP] recv video, payload= 1200 marker= false seq= 208 ts= 306000
+[16:27:02.453] [RTP] recv video, payload= 540 marker= true seq= 209 ts= 306000
+[16:27:02.453] [RTP] handleVideo: assembling 6540 bytes from ts= 306000
+[16:27:02.454] [RTP] handleVideo: decoded OK, size= QSize(320, 180)
+[16:27:02.454] [VideoRender] rendering frame QSize(320, 180)
+[16:27:02.561] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:27:02.563] [RTP] recv video, payload= 1200 marker= false seq= 210 ts= 315000
+[16:27:02.563] [RTP] recv video, payload= 1200 marker= false seq= 211 ts= 315000
+[16:27:02.563] [RTP] recv video, payload= 1200 marker= false seq= 212 ts= 315000
+[16:27:02.563] [RTP] recv video, payload= 1200 marker= false seq= 213 ts= 315000
+[16:27:02.563] [RTP] recv video, payload= 1200 marker= false seq= 214 ts= 315000
+[16:27:02.563] [RTP] recv video, payload= 563 marker= true seq= 215 ts= 315000
+[16:27:02.563] [RTP] handleVideo: assembling 6563 bytes from ts= 315000
+[16:27:02.564] [RTP] handleVideo: decoded OK, size= QSize(320, 180)
+[16:27:02.564] [VideoRender] rendering frame QSize(320, 180)
+[16:27:02.566] [SC] recv type= path_report
+[16:27:02.566] [CM] peer path report directRx= true reason= "periodic"
+[16:27:02.670] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:27:02.677] [RTP] recv video, payload= 1200 marker= false seq= 216 ts= 324000
+[16:27:02.677] [RTP] recv video, payload= 1200 marker= false seq= 217 ts= 324000
+[16:27:02.677] [RTP] recv video, payload= 1200 marker= false seq= 218 ts= 324000
+[16:27:02.677] [RTP] recv video, payload= 1200 marker= false seq= 219 ts= 324000
+[16:27:02.677] [RTP] recv video, payload= 1200 marker= false seq= 220 ts= 324000
+[16:27:02.678] [RTP] recv video, payload= 586 marker= true seq= 221 ts= 324000
+[16:27:02.678] [RTP] handleVideo: assembling 6586 bytes from ts= 324000
+[16:27:02.678] [RTP] handleVideo: decoded OK, size= QSize(320, 180)
+[16:27:02.678] [VideoRender] rendering frame QSize(320, 180)
+[16:27:02.780] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:27:02.782] [RTP] recv video, payload= 1200 marker= false seq= 222 ts= 333000
+[16:27:02.782] [RTP] recv video, payload= 1200 marker= false seq= 223 ts= 333000
+[16:27:02.782] [RTP] recv video, payload= 1200 marker= false seq= 224 ts= 333000
+[16:27:02.782] [RTP] recv video, payload= 1200 marker= false seq= 225 ts= 333000
+[16:27:02.782] [RTP] recv video, payload= 1200 marker= false seq= 226 ts= 333000
+[16:27:02.782] [RTP] recv video, payload= 578 marker= true seq= 227 ts= 333000
+[16:27:02.782] [RTP] handleVideo: assembling 6578 bytes from ts= 333000
+[16:27:02.783] [RTP] handleVideo: decoded OK, size= QSize(320, 180)
+[16:27:02.783] [VideoRender] rendering frame QSize(320, 180)
+[16:27:02.888] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:27:02.891] [RTP] recv video, payload= 1200 marker= false seq= 228 ts= 342000
+[16:27:02.891] [RTP] recv video, payload= 1200 marker= false seq= 229 ts= 342000
+[16:27:02.891] [RTP] recv video, payload= 1200 marker= false seq= 230 ts= 342000
+[16:27:02.891] [RTP] recv video, payload= 1200 marker= false seq= 231 ts= 342000
+[16:27:02.891] [RTP] recv video, payload= 1200 marker= false seq= 232 ts= 342000
+[16:27:02.891] [RTP] recv video, payload= 586 marker= true seq= 233 ts= 342000
+[16:27:02.891] [RTP] handleVideo: assembling 6586 bytes from ts= 342000
+[16:27:02.892] [RTP] handleVideo: decoded OK, size= QSize(320, 180)
+[16:27:02.892] [VideoRender] rendering frame QSize(320, 180)
+[16:27:02.998] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:27:03.000] [RTP] recv video, payload= 1200 marker= false seq= 234 ts= 351000
+[16:27:03.000] [RTP] recv video, payload= 1200 marker= false seq= 235 ts= 351000
+[16:27:03.000] [RTP] recv video, payload= 1200 marker= false seq= 236 ts= 351000
+[16:27:03.000] [RTP] recv video, payload= 1200 marker= false seq= 237 ts= 351000
+[16:27:03.000] [RTP] recv video, payload= 1200 marker= false seq= 238 ts= 351000
+[16:27:03.000] [RTP] recv video, payload= 570 marker= true seq= 239 ts= 351000
+[16:27:03.000] [RTP] handleVideo: assembling 6570 bytes from ts= 351000
+[16:27:03.000] [RTP] handleVideo: decoded OK, size= QSize(320, 180)
+[16:27:03.000] [VideoRender] rendering frame QSize(320, 180)
+[16:27:03.050] [CM] path_report directRx= true rx= 473 loss= "0.00" reason= "periodic"
+[16:27:03.110] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:27:03.113] [RTP] recv video, payload= 1200 marker= false seq= 240 ts= 360000
+[16:27:03.114] [RTP] recv video, payload= 1200 marker= false seq= 241 ts= 360000
+[16:27:03.114] [RTP] recv video, payload= 1200 marker= false seq= 242 ts= 360000
+[16:27:03.114] [RTP] recv video, payload= 1200 marker= false seq= 243 ts= 360000
+[16:27:03.114] [RTP] recv video, payload= 1200 marker= false seq= 244 ts= 360000
+[16:27:03.114] [RTP] recv video, payload= 591 marker= true seq= 245 ts= 360000
+[16:27:03.114] [RTP] handleVideo: assembling 6591 bytes from ts= 360000
+[16:27:03.115] [RTP] handleVideo: decoded OK, size= QSize(320, 180)
+[16:27:03.115] [VideoRender] rendering frame QSize(320, 180)
+[16:27:03.217] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:27:03.218] [RTP] recv video, payload= 1200 marker= false seq= 246 ts= 369000
+[16:27:03.219] [RTP] recv video, payload= 1200 marker= false seq= 247 ts= 369000
+[16:27:03.219] [RTP] recv video, payload= 1200 marker= false seq= 248 ts= 369000
+[16:27:03.219] [RTP] recv video, payload= 1200 marker= false seq= 249 ts= 369000
+[16:27:03.219] [RTP] recv video, payload= 1200 marker= false seq= 250 ts= 369000
+[16:27:03.219] [RTP] recv video, payload= 563 marker= true seq= 251 ts= 369000
+[16:27:03.219] [RTP] handleVideo: assembling 6563 bytes from ts= 369000
+[16:27:03.220] [RTP] handleVideo: decoded OK, size= QSize(320, 180)
+[16:27:03.220] [VideoRender] rendering frame QSize(320, 180)
+[16:27:03.330] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:27:03.439] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:27:03.545] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:27:03.655] [RTP] sendVideo: blocked, remotePort= 61034 cap= VideoCapture(0x197672295c0) running= false
+[16:27:03.688] [SC] recv type= hang_up
+[16:27:03.723] [Video] camera active: false

@@ -1,0 +1,49 @@
+[16:26:34.914][Server] new connection from 119.143.197.130:61309, total=1
+[16:26:34.919][Server] login: 111 from 119.143.197.130:61309
+[16:26:42.923][Server] new connection from 119.143.197.130:61437, total=2
+[16:26:45.915][Server] login: 333 from 119.143.197.130:61437
+[16:26:55.343][Server] UDP probe from 119.143.197.130:61428
+[16:26:55.343][Server]   port_discovered -> 111 (119.143.197.130:61428)
+[16:26:57.354][Server] call_offer 333(119.143.197.130) -> 111(119.143.197.130) rawSDP=[0:61032] sameNetwork=true
+[16:26:57.354][Server]   parsed format: pubPort=0 localPort=61032
+[16:26:57.354][Server]   same network -> use 192.168.196.40:61032
+[16:26:57.354][Server]   SDP transformed: [0:61032] -> [192.168.196.40:61032]
+[16:26:57.420][Server] UDP probe from 119.143.197.130:61429
+[16:26:57.420][Server]   port_discovered -> 111 (119.143.197.130:61429)
+[16:26:57.425][Server] path_report 333 -> 111 directRx=1 rxProbes=1 videoLoss=0.00 reason=first_direct
+[16:26:57.425][Server] path_report from 333 ignored: no binding
+[16:26:57.582][Server] call_early 111(119.143.197.130) -> 333(119.143.197.130) rawSDP=[61429:61034] sameNetwork=true
+[16:26:57.582][Server]   SDP transformed: [61429:61034] -> [192.168.196.40:61034]
+[16:26:57.646][Server] path_report 111 -> 333 directRx=1 rxProbes=1 videoLoss=0.00 reason=first_direct
+[16:26:57.646][Server] path_report from 111 ignored: no binding
+[16:26:59.303][Server] call_answer 111(119.143.197.130) -> 333(119.143.197.130) rawSDP=[61429:61034] sameNetwork=true
+[16:26:59.303][Server]   parsed format: pubPort=61429 localPort=61034
+[16:26:59.303][Server]   same network -> use 192.168.196.40:61034
+[16:26:59.303][Server]   SDP transformed: [61429:61034] -> [192.168.196.40:61034]
+[16:26:59.303][Server] relay: registered binding 1 for 111 <-> 333
+[16:26:59.303][Server] path_report 111 -> 333 directRx=1 rxProbes=1 videoLoss=0.00 reason=first_direct
+[16:26:59.303][Server] path 1: report from 111 directRx=1 reason=first_direct A=1 B=0
+[16:26:59.361][Server] relay 1: learned endpoint A
+[16:26:59.874][Server] relay 1: learned endpoint B
+[16:26:59.875][Server] path_report 333 -> 111 directRx=1 rxProbes=1 videoLoss=0.00 reason=first_direct
+[16:26:59.875][Server] path 1: report from 333 directRx=1 reason=first_direct A=1 B=1
+[16:26:59.875][Server] path 1: mode=p2p_probation epoch=1 reason=both_direct
+[16:27:00.265][Server] path_report 111 -> 333 directRx=1 rxProbes=26 videoLoss=0.00 reason=periodic
+[16:27:00.265][Server] path 1: report from 111 directRx=1 reason=periodic A=1 B=1
+[16:27:00.815][Server] path_report 333 -> 111 directRx=1 rxProbes=145 videoLoss=0.00 reason=periodic
+[16:27:00.816][Server] path 1: report from 333 directRx=1 reason=periodic A=1 B=1
+[16:27:01.270][Server] path_report 111 -> 333 directRx=1 rxProbes=82 videoLoss=0.00 reason=periodic
+[16:27:01.270][Server] path 1: report from 111 directRx=1 reason=periodic A=1 B=1
+[16:27:01.817][Server] path_report 333 -> 111 directRx=1 rxProbes=258 videoLoss=0.00 reason=periodic
+[16:27:01.817][Server] path 1: report from 333 directRx=1 reason=periodic A=1 B=1
+[16:27:02.265][Server] path_report 111 -> 333 directRx=1 rxProbes=136 videoLoss=0.00 reason=periodic
+[16:27:02.265][Server] path 1: report from 111 directRx=1 reason=periodic A=1 B=1
+[16:27:02.815][Server] path_report 333 -> 111 directRx=1 rxProbes=368 videoLoss=0.00 reason=periodic
+[16:27:02.815][Server] path 1: report from 333 directRx=1 reason=periodic A=1 B=1
+[16:27:02.915][Server] path 1: mode=p2p epoch=2 reason=probation_ok
+[16:27:03.272][Server] path_report 111 -> 333 directRx=1 rxProbes=190 videoLoss=0.00 reason=periodic
+[16:27:03.272][Server] path 1: report from 111 directRx=1 reason=periodic A=1 B=1
+[16:27:03.820][Server] path_report 333 -> 111 directRx=1 rxProbes=473 videoLoss=0.00 reason=periodic
+[16:27:03.820][Server] path 1: report from 333 directRx=1 reason=periodic A=1 B=1
+[16:27:04.395][Server] relay: removed binding 1 (user 111)
+[16:35:02.194][Server] 333 (119.143.197.130) disconnected
