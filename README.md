@@ -61,7 +61,9 @@ cd callclient && cmake -S . -B build && cmake --build build
 
 **UDP**：
 
-- 端口探测：客户端发 1 字节探针，服务端回 `port_discovered` 告知观察到的公网端口。
+- 端口探测：客户端发探针，服务端回 `port_discovered` 告知观察到的公网端口。
+  探针格式为 `0x01 + 用户名`（按用户名精确匹配）；老的 1 字节探针仍被接受，
+  但只能按公网 IP 匹配，同一 NAT 后有多台客户端时会串号，已不推荐使用。
 - 媒体中继：8 字节中继头 `magic(2) | version(1) | reserved(1) | relayId(4, 大端)`
   + RTP 负载。服务端通过首个数据报学习通话双方端点（源端口学习），随后双向转发。
 
