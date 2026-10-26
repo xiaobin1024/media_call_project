@@ -19,22 +19,24 @@ void CallWindow::setupUI()
     peerLabel_->setAlignment(Qt::AlignCenter);
     layout->addWidget(peerLabel_);
 
+    // 颜色统一交给 app.qss（通过 objectName 选中），不再散落内联样式
     remoteVideo_ = new QWidget();
+    remoteVideo_->setObjectName("remoteVideo");
     remoteVideo_->setMinimumSize(320, 240);
-    remoteVideo_->setStyleSheet("background-color: #1a1a2e; border: 1px solid #444;");
     layout->addWidget(remoteVideo_, 1);
 
     localPreview_ = new QLabel();
+    localPreview_->setObjectName("localPreview");
     localPreview_->setFixedSize(160, 120);
-    localPreview_->setStyleSheet("background-color: #16213e; border: 1px solid #444;");
     localPreview_->setAlignment(Qt::AlignCenter);
     localPreview_->setScaledContents(true);
     layout->addWidget(localPreview_, 0, Qt::AlignRight);
 
     auto* btnLayout = new QHBoxLayout();
     muteBtn_ = new QPushButton("Mute");
+    muteBtn_->setCheckable(true);            // 按下保持高亮，静音状态一眼可见
     hangUpBtn_ = new QPushButton("Hang Up");
-    hangUpBtn_->setStyleSheet("background-color: #e74c3c; color: white;");
+    hangUpBtn_->setProperty("danger", true);
     btnLayout->addStretch();
     btnLayout->addWidget(muteBtn_);
     btnLayout->addWidget(hangUpBtn_);

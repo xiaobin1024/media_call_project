@@ -1,0 +1,242 @@
+/*
+ * Media Call 客户端统一主题（暗色）。
+ * 早期界面完全没有样式，控件使用系统默认外观，暗色窗口下按钮、输入框、
+ * 列表与原生控件风格割裂，工具提示还是系统默认气泡。这里统一为一套扁平暗色主题。
+ *
+ * 注意：Qt QSS 不支持 box-shadow / CSS 变量，阴影与变量一律不要写。
+ */
+
+QWidget {
+    background-color: #1B1E27;
+    color: #E6E9F0;
+    font-family: "Microsoft YaHei UI", "Segoe UI", sans-serif;
+    font-size: 13px;
+}
+
+QMainWindow, QDialog, QMessageBox {
+    background-color: #1B1E27;
+}
+
+/* ---------- 文本标签 ---------- */
+
+QLabel {
+    background: transparent;
+    color: #E6E9F0;
+    padding: 2px 0;
+}
+
+QLabel[state="error"] {
+    color: #FF6B6B;
+}
+
+QLabel[state="ok"] {
+    color: #4ADE80;
+}
+
+QLabel[heading="true"] {
+    color: #9AA4B8;
+    font-size: 12px;
+    padding-bottom: 4px;
+}
+
+/* ---------- 输入框 ---------- */
+
+QLineEdit {
+    background-color: #242833;
+    border: 1px solid #333A4A;
+    border-radius: 6px;
+    padding: 7px 10px;
+    color: #E6E9F0;
+    selection-background-color: #3B82F6;
+    selection-color: #FFFFFF;
+}
+
+QLineEdit:focus {
+    border: 1px solid #3B82F6;
+}
+
+QLineEdit:disabled {
+    background-color: #1F222B;
+    color: #6B7280;
+}
+
+/* ---------- 按钮 ---------- */
+
+QPushButton {
+    background-color: #2C3240;
+    border: 1px solid #39404F;
+    border-radius: 6px;
+    padding: 7px 16px;
+    color: #E6E9F0;
+    min-height: 18px;
+}
+
+QPushButton:hover {
+    background-color: #343B4B;
+    border-color: #454D5F;
+}
+
+QPushButton:pressed {
+    background-color: #252A36;
+}
+
+QPushButton:focus {
+    border-color: #3B82F6;
+}
+
+QPushButton:disabled {
+    background-color: #22252F;
+    color: #6B7280;
+    border-color: #2A2E39;
+}
+
+/* 主操作按钮：通过 default 属性区分，避免堆砌 objectName */
+QPushButton[primary="true"] {
+    background-color: #3B82F6;
+    border: 1px solid #3B82F6;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+QPushButton[primary="true"]:hover {
+    background-color: #4C8DF8;
+    border-color: #4C8DF8;
+}
+
+QPushButton[primary="true"]:pressed {
+    background-color: #1D4ED8;
+    border-color: #1D4ED8;
+}
+
+QPushButton[primary="true"]:disabled {
+    background-color: #2A3A55;
+    border-color: #2A3A55;
+    color: #8FA3C0;
+}
+
+QPushButton[danger="true"] {
+    background-color: #B0323C;
+    border: 1px solid #B0323C;
+    color: #FFFFFF;
+}
+
+QPushButton[danger="true"]:hover {
+    background-color: #C33B45;
+}
+
+QPushButton:checked {
+    background-color: #3B82F6;
+    border-color: #3B82F6;
+    color: #FFFFFF;
+}
+
+/* ---------- 列表 ---------- */
+
+QListWidget {
+    background-color: #242833;
+    border: 1px solid #333A4A;
+    border-radius: 6px;
+    padding: 4px;
+    outline: 0;
+}
+
+QListWidget::item {
+    padding: 7px 10px;
+    border-radius: 4px;
+    margin: 1px 0;
+}
+
+QListWidget::item:hover {
+    background-color: #2E3543;
+}
+
+QListWidget::item:selected {
+    background-color: #3B82F6;
+    color: #FFFFFF;
+}
+
+/* ---------- 滚动条（纵向与横向保持一致） ---------- */
+
+QScrollBar:vertical {
+    background: #1F222B;
+    width: 10px;
+    margin: 0;
+    border: none;
+}
+
+QScrollBar:horizontal {
+    background: #1F222B;
+    height: 10px;
+    margin: 0;
+    border: none;
+}
+
+QScrollBar::handle:vertical,
+QScrollBar::handle:horizontal {
+    background: #3A4252;
+    border-radius: 5px;
+    min-height: 24px;
+    min-width: 24px;
+}
+
+QScrollBar::handle:vertical:hover,
+QScrollBar::handle:horizontal:hover {
+    background: #4A5466;
+}
+
+QScrollBar::add-line,
+QScrollBar::sub-line {
+    height: 0;
+    width: 0;
+}
+
+QScrollBar::add-page,
+QScrollBar::sub-page {
+    background: none;
+}
+
+/* ---------- 工具提示（此前是系统默认气泡，暗色下极突兀） ---------- */
+
+QToolTip {
+    background-color: #2C3240;
+    color: #E6E9F0;
+    border: 1px solid #454D5F;
+    border-radius: 4px;
+    padding: 4px 8px;
+}
+
+/* ---------- 菜单 ---------- */
+
+QMenu {
+    background-color: #242833;
+    border: 1px solid #333A4A;
+    padding: 4px;
+}
+
+QMenu::item {
+    padding: 6px 24px;
+    border-radius: 4px;
+}
+
+QMenu::item:selected {
+    background-color: #3B82F6;
+    color: #FFFFFF;
+}
+
+/* ---------- 通话窗口 ---------- */
+
+CallWindow {
+    background-color: #14171E;
+}
+
+QWidget#remoteVideo {
+    background-color: #0E1015;
+    border: 1px solid #2A2E39;
+    border-radius: 8px;
+}
+
+QLabel#localPreview {
+    background-color: #0E1015;
+    border: 1px solid #2A2E39;
+    border-radius: 6px;
+}

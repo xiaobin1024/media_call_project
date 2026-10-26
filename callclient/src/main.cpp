@@ -33,6 +33,20 @@ int main(int argc, char* argv[])
     QApplication app(argc, argv);
     app.setApplicationName("MediaCall");
 
+    // 统一主题：样式表打进资源，避免发布时漏带文件或路径不一致导致界面回退到系统默认
+    {
+        QFile qss(":/styles/app.qss");
+        if (qss.open(QIODevice::ReadOnly))
+        {
+            app.setStyleSheet(QString::fromUtf8(qss.readAll()));
+            qss.close();
+        }
+        else
+        {
+            qDebug() << "[Theme] 未加载到 app.qss，界面将使用系统默认外观";
+        }
+    }
+
     MainWindow window;
     window.show();
 

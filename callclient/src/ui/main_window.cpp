@@ -7,7 +7,21 @@
 #include <QVBoxLayout>
 #include <QHBoxLayout>
 #include <QMessageBox>
+#include <QStyle>
 #include <QVideoFrameFormat>
+#include <QListWidgetItem>
+
+namespace {
+// 通过动态属性切换 QLabel 的配色（app.qss 里的 QLabel[state="..."]）。
+// 改属性后必须手动 polish，否则样式不会立即刷新。
+void setLabelState(QLabel* label, const char* state)
+{
+    if (!label) return;
+    label->setProperty("state", state);
+    label->style()->unpolish(label);
+    label->style()->polish(label);
+}
+}
 
 MainWindow::MainWindow(QWidget* parent)
     : QMainWindow(parent)
@@ -25,31 +39,68 @@ void MainWindow::setupUI()
 
     loginWidget_ = new QWidget();
     auto* loginLayout = new QVBoxLayout(loginWidget_);
-    loginLayout->addWidget(new QLabel("Username:"));
+    loginLayout->setContentsMargins(28, 28, 28, 28);
+    loginLayout->setSpacing(10);
+
+    auto* loginHeading = new QLabel("Username");
+    loginHeading->setProperty("heading", true);
+    loginLayout->addWidget(loginHeading);
+
     usernameEdit_ = new QLineEdit();
+    usernameEdit_->setPlaceholderText("输入用户名，回车登录");
+    usernameEdit_->setMaxLength(32);
     loginLayout->addWidget(usernameEdit_);
+
     loginBtn_ = new QPushButton("Login");
+    loginBtn_->setProperty("primary", true);
     loginLayout->addWidget(loginBtn_);
+
     statusLabel_ = new QLabel();
+    statusLabel_->setWordWrap(true);
     loginLayout->addWidget(statusLabel_);
     loginLayout->addStretch();
+
     connect(loginBtn_, &QPushButton::clicked, this, &MainWindow::onLoginClicked);
+    // 回车即登录，省去一次鼠标点击
+    connect(usernameEdit_, &QLineEdit::returnPressed, this, &MainWindow::onLoginClicked);
 
     mainWidget_ = new QWidget();
     auto* mainLayout = new QVBoxLayout(mainWidget_);
+    mainLayout->setContentsMargins(20, 20, 20, 20);
+    mainLayout->setSpacing(10);
+
     selfLabel_ = new QLabel("Not logged in");
+    selfLabel_->setProperty("state", "ok");
     mainLayout->addWidget(selfLabel_);
+
+    auto* listHeading = new QLabel("Online users");
+    listHeading->setProperty("heading", true);
+    mainLayout->addWidget(listHeading);
+
     userList_ = new QListWidget();
-    mainLayout->addWidget(new QLabel("Online users:"));
-    mainLayout->addWidget(userList_);
+    mainLayout->addWidget(userList_, 1);
+
     auto* btnLayout = new QHBoxLayout();
     callBtn_ = new QPushButton("Call");
+    callBtn_->setProperty("primary", true);
+    callBtn_->setEnabled(false);          // 未选中用户时不可点，避免空操作
     logoutBtn_ = new QPushButton("Logout");
+    logoutBtn_->setProperty("danger", true);
     btnLayout->addWidget(callBtn_);
     btnLayout->addWidget(logoutBtn_);
     mainLayout->addLayout(btnLayout);
+
     connect(callBtn_, &QPushButton::clicked, this, &MainWindow::onCallClicked);
     connect(logoutBtn_, &QPushButton::clicked, this, &MainWindow::onLogoutClicked);
+    connect(userList_, &QListWidget::itemSelectionChanged, this, [this]()
+    {
+        callBtn_->setEnabled(userList_->currentItem() != nullptr);
+    });
+    connect(userList_, &QListWidget::itemDoubleClicked, this,
+            [this](QListWidgetItem* item)
+    {
+        if (item) emit callRequested(item->text());
+    });
 
     stack->addWidget(loginWidget_);
     stack->addWidget(mainWidget_);
@@ -61,9 +112,13 @@ void MainWindow::onLoginClicked()
     auto name = usernameEdit_->text().trimmed();
     if (name.isEmpty())
     {
-        statusLabel_->setText("Enter a username");
+        statusLabel_->setText("请输入用户名");
+        setLabelState(statusLabel_, "error");
         return;
     }
+    statusLabel_->setText("正在登录…");
+    setLabelState(statusLabel_, "");
+    loginBtn_->setEnabled(false);
     emit loginRequested(name);
 }
 
@@ -80,19 +135,28 @@ void MainWindow::onLogoutClicked()
     loginWidget_->show();
     mainWidget_->hide();
     userList_->clear();
+    callBtn_->setEnabled(false);
+    selfLabel_->setText("Not logged in");
+    setLabelState(selfLabel_, "");
 }
 
 void MainWindow::onLoginSuccess()
 {
-    selfLabel_->setText("Logged in as: " + usernameEdit_->text());
+    selfLabel_->setText("已登录：" + usernameEdit_->text());
+    setLabelState(selfLabel_, "ok");
     loginWidget_->hide();
     mainWidget_->show();
     statusLabel_->clear();
+    setLabelState(statusLabel_, "");
+    loginBtn_->setEnabled(true);
+    usernameEdit_->clear();
 }
 
 void MainWindow::onLoginFailed(const QString& reason)
 {
-    statusLabel_->setText("Login failed: " + reason);
+    statusLabel_->setText("登录失败：" + reason);
+    setLabelState(statusLabel_, "error");
+    loginBtn_->setEnabled(true);
 }
 
 void MainWindow::onUserListUpdated(const QStringList& users)

@@ -1,4 +1,5 @@
 set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
 
 set(SOURCES
     main.cpp
@@ -14,6 +15,7 @@ set(SOURCES
     transport/rtp_session.cpp
     transport/jitter_buffer.cpp
     call/call_manager.cpp
+    ui/app.qrc
 )
 
 set(HEADERS
