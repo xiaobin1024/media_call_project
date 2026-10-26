@@ -1,0 +1,56 @@
+# 构建产物
+build/
+out/
+cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.vcxproj*
+*.sln
+*.dir/
+x64/
+Debug/
+Release/
+
+# 打包发布物（含第三方 DLL，体积大且非源码）
+dist/
+
+# Qt/CMake 本地机器相关
+CMakeLists.txt.user
+*.qtc
+*.user
+.qtcsettings.cmake
+
+# 编译中间产物
+*.o
+*.obj
+*.pdb
+*.ilk
+*.exp
+*.lib
+*.dll
+*.exe
+moc_*.cpp
+ui_*.h
+qrc_*.cpp
+*.autosave
+
+# 本地复习/面试笔记（个人用，不入库）
+面试复习指南.md
+项目架构说明_本地复习.md
+项目总结.md
+项目面试叙述与深挖应答_岗位版.md
+P2P项目面试深挖准备.md
+P2P优先改造方案.md
+简历项目经历_岗位定制版.md
+项目经历_简历版.md
+项目经历_面试深挖与表达指南.md
+
+# 运行时
+*.log
+__pycache__/
+
+# 根目录原始联调日志（已归档到 docs/联调日志/）
+/*测试日志.txt
+/服务器日志.txt
