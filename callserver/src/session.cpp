@@ -93,8 +93,23 @@ void Session::handleMessage(const std::string& line)
 
     if (type == "login")
     {
-        username_ = findField(line, "username");
-        LOG() << "login: " << username_ << " from " << peerIp_ << ":" << peerPort_ << std::endl;
+        auto name = findField(line, "username");
+
+        if (name.empty())
+        {
+            LOG() << "login rejected: empty username from " << peerIp_ << ":" << peerPort_ << std::endl;
+            send("{\"type\":\"login_resp\",\"success\":false,\"msg\":\"empty username\"}\n");
+            return;
+        }
+
+        // 同一用户名重复登录：先踢掉旧会话，再让本次登录生效。
+        // 否则旧连接仍占据该用户名，后续按用户名转发会发到已失效的连接上。
+        int kicked = server_.removeOtherSessionsByUsername(name, fd_);
+        username_ = name;
+
+        LOG() << "login: " << username_ << " from " << peerIp_ << ":" << peerPort_
+              << (kicked > 0 ? (" (kicked " + std::to_string(kicked) + " duplicate)") : "")
+              << std::endl;
         send("{\"type\":\"login_resp\",\"success\":true}\n");
         server_.broadcastUserList();
     }

@@ -229,12 +229,42 @@ void SignalingServer::handleUdpRead()
     char ipBuf[64] = {};
     inet_ntop(AF_INET, &clientAddr.sin_addr, ipBuf, sizeof(ipBuf));
     int port = ntohs(clientAddr.sin_port);
-    LOG() << "UDP probe from " << ipBuf << ":" << port << std::endl;
+    LOG() << "UDP probe from " << ipBuf << ":" << port
+          << " len=" << n << std::endl;
 
-    // Notify the corresponding session via TCP signaling
     std::string clientIp(ipBuf);
     std::string portMsg = "{\"type\":\"port_discovered\",\"port\":"
                         + std::to_string(port) + "}\n";
+
+    // 带用户名的探测包（新格式）：0x01 + 用户名。
+    // 早期客户端只发 1 字节探针，服务端只能按公网 IP 匹配会话——同一 NAT 后有多台
+    // 客户端时（公网 IP 相同）会命中别人的会话，自己永远收不到 port_discovered，
+    // NAT 穿透必然失败。新格式按用户名精确匹配，同时保留对老探针的兼容。
+    if (n >= 2 && static_cast<unsigned char>(buf[0]) == 0x01)
+    {
+        std::string probeUser(buf + 1, static_cast<size_t>(n - 1));
+        bool found = false;
+        {
+            std::lock_guard<std::mutex> lock(sessionsMutex_);
+            for (auto& [fd, s] : sessions_)
+            {
+                if (s->username() == probeUser)
+                {
+                    LOG() << "  port_discovered -> " << probeUser
+                          << " (" << ipBuf << ":" << port << ") [matched by username]"
+                          << std::endl;
+                    s->send(portMsg);
+                    found = true;
+                    break;
+                }
+            }
+        }
+        if (!found)
+            LOG() << "  no session named '" << probeUser << "' for tagged probe" << std::endl;
+        return;
+    }
+
+    // 老格式（1 字节探针）：退化为按 IP 匹配，仅保证旧客户端仍可用。
     bool found = false;
     {
         std::lock_guard<std::mutex> lock(sessionsMutex_);
@@ -633,6 +663,30 @@ std::string SignalingServer::getSessionIp(const std::string& username)
             return s->peerIp();
     }
     return {};
+}
+
+int SignalingServer::removeOtherSessionsByUsername(const std::string& username,
+                                                   int selfFd)
+{
+    if (username.empty()) return 0;
+
+    std::vector<int> victims;
+    {
+        std::lock_guard<std::mutex> lock(sessionsMutex_);
+        for (auto& [fd, s] : sessions_)
+        {
+            if (fd != selfFd && s->username() == username)
+                victims.push_back(fd);
+        }
+    }
+
+    for (int fd : victims)
+    {
+        LOG() << "duplicate login: kicking previous session of "
+              << username << " (fd=" << fd << ")" << std::endl;
+        removeSession(fd);
+    }
+    return static_cast<int>(victims.size());
 }
 
 void SignalingServer::removeSession(int fd)

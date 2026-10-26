@@ -63,6 +63,9 @@ public:
 
     void broadcastUserList();
     void removeSession(int fd);
+    // 重名登录时踢掉同名的旧会话（selfFd 为当前登录的连接，不踢自己）。
+    // 否则 forwardTo / getSessionIp 按用户名取第一个匹配，会把信令发到已失效的旧连接上。
+    int removeOtherSessionsByUsername(const std::string& username, int selfFd);
     bool forwardTo(const std::string& target, const std::string& msg);
     std::string getSessionIp(const std::string& username);
 
