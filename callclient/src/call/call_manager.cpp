@@ -69,7 +69,7 @@ void CallManager::init(const QString& serverIp, quint16 serverPort,
         if (rtpSession_)
         {
             lastDiscoveredPort_ = 0;
-            rtpSession_->sendUdpProbe(QHostAddress(serverIp_), serverPort_ + 1);
+            rtpSession_->sendUdpProbe(QHostAddress(serverIp_), serverPort_ + 1, myUsername_.toUtf8());
             qDebug() << "[CM] early probe sent for" << from
                      << "localPort=" << rtpSession_->localPort();
 
@@ -227,7 +227,7 @@ void CallManager::call(const QString& target)
     quint16 localPort = rtpSession_->localPort();
     lastDiscoveredPort_ = 0;
 
-    rtpSession_->sendUdpProbe(QHostAddress(serverIp_), serverPort_ + 1);
+    rtpSession_->sendUdpProbe(QHostAddress(serverIp_), serverPort_ + 1, myUsername_.toUtf8());
 
     qDebug() << "[CM] call: probe sent, waiting 2s, LDP=" << lastDiscoveredPort_;
 
@@ -261,7 +261,7 @@ void CallManager::acceptCall()
     // 如果端口还未发现，等待（有早发探针通常不会发生）
     if (lastDiscoveredPort_ == 0 && rtpSession_)
     {
-        rtpSession_->sendUdpProbe(QHostAddress(serverIp_), serverPort_ + 1);
+        rtpSession_->sendUdpProbe(QHostAddress(serverIp_), serverPort_ + 1, myUsername_.toUtf8());
         QElapsedTimer timer;
         timer.start();
         while (lastDiscoveredPort_ == 0 && timer.elapsed() < 2000)

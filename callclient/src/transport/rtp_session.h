@@ -35,7 +35,10 @@ public:
     void setRemotePeer(const QHostAddress& addr, quint16 port);
     void setSsrc(uint32_t ssrc);
     uint32_t videoSsrc() const { return videoSsrc_; }
-    void sendUdpProbe(const QHostAddress& host, quint16 port);
+    // userTag 非空时发送"带用户名"的探测包（0x01 + 用户名），服务端按用户名精确匹配；
+    // 为空则发老式 1 字节探针（服务端只能按 IP 匹配）。同 NAT 后多客户端必须用前者。
+    void sendUdpProbe(const QHostAddress& host, quint16 port,
+                      const QByteArray& userTag = QByteArray());
 
     void setRelayConfig(const QHostAddress& addr, quint16 port, quint32 relayId);
     void setRelayMode(bool enabled);

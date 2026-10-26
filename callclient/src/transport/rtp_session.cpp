@@ -127,9 +127,22 @@ void RtpSession::setSsrc(uint32_t ssrc)
     videoSsrc_ = ssrc + 1; // 视频流独立 SSRC，seq 也按流独立计数（RFC 3550）
 }
 
-void RtpSession::sendUdpProbe(const QHostAddress& host, quint16 port)
+void RtpSession::sendUdpProbe(const QHostAddress& host, quint16 port,
+                              const QByteArray& userTag)
 {
-    QByteArray probe(1, 0);
+    if (userTag.isEmpty())
+    {
+        // 老格式：1 字节探针，服务端只能按公网 IP 匹配会话
+        QByteArray probe(1, 0);
+        socket_->writeDatagram(probe, host, port);
+        return;
+    }
+
+    // 新格式：0x01 + 用户名。同一 NAT 后有多台客户端时公网 IP 相同，
+    // 只有带上用户名服务端才能把 port_discovered 发回正确的一端。
+    QByteArray probe;
+    probe.append(char(0x01));
+    probe.append(userTag);
     socket_->writeDatagram(probe, host, port);
 }
 
