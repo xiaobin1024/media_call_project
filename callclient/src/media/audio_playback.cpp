@@ -1,5 +1,7 @@
 #include "audio_playback.h"
 
+#include <QDebug>
+
 AudioPlayback::AudioPlayback(QObject* parent)
     : MediaDevice(parent)
 {
@@ -20,11 +22,19 @@ bool AudioPlayback::start()
     format.setSampleFormat(QAudioFormat::Int16);
 
     auto device = QMediaDevices::defaultAudioOutput();
-    if (device.isNull()) return false;
+    if (device.isNull())
+    {
+        qWarning() << "[AudioPlayback] 无可用音频输出设备（扬声器缺失或被禁用）";
+        return false;
+    }
 
     audioSink_ = new QAudioSink(device, format, this);
     ioDevice_ = audioSink_->start();
     running_ = (ioDevice_ != nullptr);
+
+    qDebug() << "[AudioPlayback] start device=" << device.description()
+             << "rate= 8000 ch= 1 ok=" << running_
+             << "error=" << audioSink_->error();
 
     return running_;
 }

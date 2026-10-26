@@ -388,8 +388,17 @@ void CallManager::teardownMedia()
 
 void CallManager::startMedia()
 {
-    if (audioCapture_) audioCapture_->start();
-    if (audioPlayback_) audioPlayback_->start();
+    // 音频先起，日志里要能看到采集/播放各自的成败，否则通话无声时无法定位是哪一端
+    if (audioCapture_)
+    {
+        bool ok = audioCapture_->start();
+        qDebug() << "[CM] startMedia: audio capture started=" << ok;
+    }
+    if (audioPlayback_)
+    {
+        bool ok = audioPlayback_->start();
+        qDebug() << "[CM] startMedia: audio playback started=" << ok;
+    }
 
     if (videoCapture_ && videoCapture_->start())
         qDebug() << "[CM] startMedia: video capture start requested";

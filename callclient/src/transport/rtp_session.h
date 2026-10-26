@@ -118,6 +118,13 @@ private:
     QByteArray audioBuffer_;
     bool muted_ = false;
 
+    // 音频链路可观测性：音频 50 包/秒，逐包打印会淹没视频与信令日志，
+    // 所以只在「状态变化」或「每 N 包」时打一次。
+    int audioSentPackets_ = 0;
+    int audioRecvPackets_ = 0;
+    bool audioBlockLogged_ = false;
+    bool videoBlockLogged_ = false;
+
     QTimer* videoSendTimer_;
     QImage latestImage_;
     QMutex imageMutex_;

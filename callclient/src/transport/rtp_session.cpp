@@ -351,6 +351,13 @@ void RtpSession::onReadyRead()
                 {
                     audioPlayback_->enqueueData(pkt.payload());
                     emit audioPacketReceived(pkt.payload());
+                    if (++audioRecvPackets_ % 100 == 1)
+                    {
+                        qDebug() << "[RTP] recv audio: pkt" << audioRecvPackets_
+                                 << "payload=" << pkt.payload().size()
+                                 << "seq=" << pkt.sequenceNumber()
+                                 << "fromRelay=" << fromRelay;
+                    }
                 }
             }
         }
@@ -399,7 +406,15 @@ void RtpSession::onVideoFrameCaptured(const QVideoFrame& frame)
 
 void RtpSession::sendAudioPacket()
 {
-    if (remotePort_ == 0) return;
+    if (remotePort_ == 0)
+    {
+        if (!audioBlockLogged_)
+        {
+            audioBlockLogged_ = true;
+            qDebug() << "[RTP] sendAudio: blocked, remotePort= 0";
+        }
+        return;
+    }
 
     if (muted_)
     {
@@ -409,9 +424,22 @@ void RtpSession::sendAudioPacket()
         return;
     }
 
-    if (!audioCapture_ || !audioCapture_->isRunning()) return;
+    if (!audioCapture_ || !audioCapture_->isRunning())
+    {
+        if (!audioBlockLogged_)
+        {
+            audioBlockLogged_ = true;
+            qDebug() << "[RTP] sendAudio: blocked, capture="
+                     << audioCapture_
+                     << "running="
+                     << (audioCapture_ ? audioCapture_->isRunning() : false);
+        }
+        return;
+    }
 
     if (audioBuffer_.size() < AUDIO_FRAME_SIZE) return;
+
+    audioBlockLogged_ = false;
 
     QByteArray frame = audioBuffer_.left(AUDIO_FRAME_SIZE);
     audioBuffer_.remove(0, AUDIO_FRAME_SIZE);
@@ -426,17 +454,32 @@ void RtpSession::sendAudioPacket()
 
     packet.setPayload(frame);
     sendRtpPacket(packet);
+
+    if (++audioSentPackets_ % 100 == 1)
+    {
+        qDebug() << "[RTP] sendAudio: pkt" << audioSentPackets_
+                 << "payload=" << frame.size()
+                 << "to" << remoteAddr_.toString() << remotePort_
+                 << "relay=" << relayMode_;
+    }
 }
 
 void RtpSession::sendVideoPacket()
 {
     if (remotePort_ == 0 || !videoCapture_ || !videoCapture_->isRunning())
     {
-        qDebug() << "[RTP] sendVideo: blocked, remotePort=" << remotePort_
-                 << "cap=" << videoCapture_
-                 << "running=" << (videoCapture_ ? videoCapture_->isRunning() : false);
+        // 未接通/摄像头未就绪时每 100ms 都会走到这里，只在状态变化时打印一次，避免刷屏
+        if (!videoBlockLogged_)
+        {
+            videoBlockLogged_ = true;
+            qDebug() << "[RTP] sendVideo: blocked, remotePort=" << remotePort_
+                     << "cap=" << videoCapture_
+                     << "running=" << (videoCapture_ ? videoCapture_->isRunning() : false);
+        }
         return;
     }
+
+    videoBlockLogged_ = false;
 
     QImage img;
     {

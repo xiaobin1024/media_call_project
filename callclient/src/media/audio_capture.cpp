@@ -1,5 +1,7 @@
 #include "audio_capture.h"
 
+#include <QDebug>
+
 AudioCapture::AudioCapture(QObject* parent)
     : MediaDevice(parent)
 {
@@ -20,10 +22,18 @@ bool AudioCapture::start()
     format.setSampleFormat(QAudioFormat::Int16);
 
     auto device = QMediaDevices::defaultAudioInput();
-    if (device.isNull()) return false;
+    if (device.isNull())
+    {
+        qWarning() << "[AudioCapture] 无可用音频输入设备（麦克风缺失或被占用/禁用）";
+        return false;
+    }
 
     audioSource_ = new QAudioSource(device, format, this);
     ioDevice_ = audioSource_->start();
+
+    qDebug() << "[AudioCapture] start device=" << device.description()
+             << "rate= 8000 ch= 1 fmt= Int16 ok=" << (ioDevice_ != nullptr)
+             << "error=" << audioSource_->error();
 
     if (ioDevice_)
     {
